@@ -1,0 +1,34 @@
+{
+  "name": "Wholesale",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "We can remember it for you wholesale.",
+  "browser_action": {
+    "default_icon": "images/icon.png"
+  },
+  "background": {
+    "scripts": ["scripts/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://en.wikipedia.org/*"],
+      "css": ["css/wholesale.css", "css/jquery-ui-1.8.20.custom.css"],
+      "js": ["scripts/jquery.js","scripts/localstorage.js","scripts/Wiki.js","scripts/spin.js","scripts/md5.js", "scripts/jquery-ui.js","scripts/json2.js","scripts/content.js"]
+    }
+  ],
+
+  "permissions": [
+    "http://en.wikipedia.org/*",
+    "https://en.wikipedia.org/*",
+    "http://stats.grok.se/*"
+  ],
+
+  "web_accessible_resources": [
+    "images/tooltips-olive-up.png",
+    "images/icons/bubble_clear.png",
+    "images/icons/bubble_dark.png",
+    "images/icons/page_remove.png",
+    "images/slider-button.png"
+  ]
+
+}
